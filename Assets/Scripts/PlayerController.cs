@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed = 30.0f;
+    public float speed;
 
     void Start()
     {
@@ -18,8 +18,18 @@ public class PlayerController : MonoBehaviour
 
         if (xAxis != 0 || yAxis != 0)
         {
-            transform.Translate(Vector3.forward * Time.deltaTime * yAxis * speed);
-            transform.Translate(Vector3.right * Time.deltaTime * xAxis * speed);
+            transform.Translate(speed * Time.deltaTime * xAxis * Vector3.right);
+            transform.Translate(speed * Time.deltaTime * yAxis * Vector3.forward);
+            
+            // now check if out of bounds, and move back in if the player is out
+            if (transform.position.x < -GlobalVariables.leftRight || transform.position.x > GlobalVariables.leftRight)
+            {
+                transform.Translate(speed * Time.deltaTime * xAxis * -Vector3.right);
+            }
+            if (transform.position.z > GlobalVariables.top || transform.position.z < GlobalVariables.bottom)
+            {
+                transform.Translate(speed * Time.deltaTime * yAxis * -Vector3.forward);
+            }
         }
     }
 }
