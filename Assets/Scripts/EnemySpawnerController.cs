@@ -32,7 +32,7 @@ public class EnemySpawnerController : MonoBehaviour
 
     private Vector3 GenerateGenericEnemySpawnLocation()
     {
-        return new Vector3(Random.Range(-GlobalVariables.leftRight, GlobalVariables.leftRight), GlobalVariables.height, GlobalVariables.top);
+        return new Vector3(Random.Range(-GlobalVariables.leftRight, GlobalVariables.leftRight), GlobalVariables.height, GlobalVariables.top+GlobalVariables.offsetContinue);
     }
 
     public void StopSpawning()
