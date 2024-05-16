@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public GameObject regularShot;
 
     private float shootingCooldown = 0;
+    private float projectileOffset = 1.0f; // how far in front of the center of the player the projectile spawns
     void Start()
     {
         
@@ -29,11 +30,11 @@ public class PlayerController : MonoBehaviour
             // now check if out of bounds, and move back in if the player is out
             if (transform.position.x < -GlobalVariables.leftRight || transform.position.x > GlobalVariables.leftRight)
             {
-                transform.Translate(movementSpeed * Time.deltaTime * xAxis * -Vector3.right);
+                transform.Translate(movementSpeed * Time.deltaTime * xAxis * -Vector3.right, Space.World);
             }
             if (transform.position.z > GlobalVariables.top || transform.position.z < GlobalVariables.bottom)
             {
-                transform.Translate(movementSpeed * Time.deltaTime * yAxis * -Vector3.forward);
+                transform.Translate(movementSpeed * Time.deltaTime * yAxis * -Vector3.forward, Space.World);
             }
         }
 
@@ -42,7 +43,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.Space) && shootingCooldown <= 0)
         {
             shootingCooldown = 10 / shootingSpeed;
-            Instantiate(regularShot, transform.position, regularShot.transform.rotation);
+            Instantiate(regularShot, new Vector3(transform.position.x, transform.position.y, transform.position.z+projectileOffset), regularShot.transform.rotation);
         }
     }
 }

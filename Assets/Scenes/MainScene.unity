@@ -697,7 +697,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 15
   shootingSpeed: 50
-  regularShot: {fileID: 8535329254383001672, guid: fca37c699c39d3f4ab04d7a2afae33d9, type: 3}
+  regularShot: {fileID: 1788619886747300, guid: 053330ce7545f804e8bdabaa1fc96965, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

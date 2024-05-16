@@ -13,7 +13,7 @@ public class PlayerRegularShotController : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(speed * Time.deltaTime * Vector3.forward);
+        transform.Translate(speed * Time.deltaTime * Vector3.forward, Space.World);
 
         // destroy itself if out of bounds
         if (transform.position.z > GlobalVariables.top+GlobalVariables.offsetContinue)
