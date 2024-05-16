@@ -14,6 +14,7 @@ public class GenericEnemyDeath : MonoBehaviour
 
     private IEnumerator RemoveSelf()
     {
+        GameManager.Instance.AddScore(GlobalVariables.genericEnemyPointValue);
         deathAnimation.GetComponent<ParticleSystem>().Play();
         deathSound.GetComponent<AudioSource>().Play();
         yield return new WaitForSeconds(5);

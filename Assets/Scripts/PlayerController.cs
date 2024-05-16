@@ -10,7 +10,9 @@ public class PlayerController : MonoBehaviour
     public GameObject regularShot;
 
     private float shootingCooldown = 0;
-    private float projectileOffset = 1.0f; // how far in front of the center of the player the projectile spawns
+    private float projectileOffset = 0f; // how far in front of the center of the player the projectile spawns
+
+    private float rocketSeparation = 0.5f; // how far from the center of the ship the rockets appear when shooting
     void Start()
     {
 
@@ -49,6 +51,7 @@ public class PlayerController : MonoBehaviour
     private void Shoot()
     {
         shootingCooldown = 10 / shootingSpeed;
-        Instantiate(regularShot, new Vector3(transform.position.x, transform.position.y, transform.position.z + projectileOffset), regularShot.transform.rotation);
+        Instantiate(regularShot, new Vector3(transform.position.x-rocketSeparation, transform.position.y, transform.position.z + projectileOffset), regularShot.transform.rotation);
+        Instantiate(regularShot, new Vector3(transform.position.x+rocketSeparation, transform.position.y, transform.position.z + projectileOffset), regularShot.transform.rotation);
     }
 }
