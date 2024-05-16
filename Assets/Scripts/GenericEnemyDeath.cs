@@ -13,7 +13,6 @@ public class GenericEnemyDeath : MonoBehaviour
 
     private IEnumerator RemoveSelf()
     {
-        Debug.Log("Play Animation");
         deathAnimation.GetComponent<ParticleSystem>().Play();
         yield return new WaitForSeconds(5);
         Destroy(gameObject);

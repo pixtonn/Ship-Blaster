@@ -25,6 +25,9 @@ public class GenericEnemyController : MonoBehaviour
 
     private void OnDestroy()
     {
-        Instantiate(deathAnimation, transform.position, deathAnimation.transform.rotation);
+        if (gameObject.scene.isLoaded)
+        {
+            Instantiate(deathAnimation, transform.position, deathAnimation.transform.rotation);
+        }
     }
 }

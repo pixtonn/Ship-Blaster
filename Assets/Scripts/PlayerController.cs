@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     private float projectileOffset = 1.0f; // how far in front of the center of the player the projectile spawns
     void Start()
     {
-        
+
     }
 
     void Update()
