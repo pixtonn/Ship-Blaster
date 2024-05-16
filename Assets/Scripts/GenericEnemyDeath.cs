@@ -5,6 +5,7 @@ using UnityEngine;
 public class GenericEnemyDeath : MonoBehaviour
 {
     public GameObject deathAnimation;
+    public GameObject deathSound;
     void Start()
     {
         StartCoroutine(nameof(RemoveSelf));
@@ -14,6 +15,7 @@ public class GenericEnemyDeath : MonoBehaviour
     private IEnumerator RemoveSelf()
     {
         deathAnimation.GetComponent<ParticleSystem>().Play();
+        deathSound.GetComponent<AudioSource>().Play();
         yield return new WaitForSeconds(5);
         Destroy(gameObject);
     }

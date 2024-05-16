@@ -100,7 +100,6 @@ MonoBehaviour:
   movementSpeed: 15
   shootingSpeed: 50
   regularShot: {fileID: 1788619886747300, guid: 053330ce7545f804e8bdabaa1fc96965, type: 3}
-  engineFire: {fileID: 7862238126193671649}
 --- !u!1001 &8477611450409586487
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -109,6 +108,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7107410947381155439}
     m_Modifications:
+    - target: {fileID: 296230944595500747, guid: 4e35892e4c5444340a0e2189311808e5, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 456482987228090586, guid: 4e35892e4c5444340a0e2189311808e5, type: 3}
+      propertyPath: lengthInSec
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 456482987228090586, guid: 4e35892e4c5444340a0e2189311808e5, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 456482987228090586, guid: 4e35892e4c5444340a0e2189311808e5, type: 3}
+      propertyPath: InitialModule.startLifetime.minScalar
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1781949194303238864, guid: 4e35892e4c5444340a0e2189311808e5, type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1781949194303238864, guid: 4e35892e4c5444340a0e2189311808e5, type: 3}
       propertyPath: LifetimeByEmitterSpeedModule.m_Range.x
       value: 1
@@ -139,7 +158,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1781949194303238865, guid: 4e35892e4c5444340a0e2189311808e5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 1781949194303238865, guid: 4e35892e4c5444340a0e2189311808e5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -177,16 +196,44 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4811017566070180577, guid: 4e35892e4c5444340a0e2189311808e5, type: 3}
+      propertyPath: lengthInSec
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811017566070180577, guid: 4e35892e4c5444340a0e2189311808e5, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5397316038221488649, guid: 4e35892e4c5444340a0e2189311808e5, type: 3}
+      propertyPath: lengthInSec
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5397316038221488649, guid: 4e35892e4c5444340a0e2189311808e5, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5397316038221488649, guid: 4e35892e4c5444340a0e2189311808e5, type: 3}
+      propertyPath: InitialModule.startLifetime.minScalar
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9101080872212838530, guid: 4e35892e4c5444340a0e2189311808e5, type: 3}
+      propertyPath: lengthInSec
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9101080872212838530, guid: 4e35892e4c5444340a0e2189311808e5, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 9101080872212838530, guid: 4e35892e4c5444340a0e2189311808e5, type: 3}
+      propertyPath: InitialModule.startLifetime.minScalar
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5403031602270893583, guid: 4e35892e4c5444340a0e2189311808e5, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e35892e4c5444340a0e2189311808e5, type: 3}
---- !u!1 &7862238126193671649 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1781949194303238870, guid: 4e35892e4c5444340a0e2189311808e5, type: 3}
-  m_PrefabInstance: {fileID: 8477611450409586487}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7862238126193671654 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1781949194303238865, guid: 4e35892e4c5444340a0e2189311808e5, type: 3}
