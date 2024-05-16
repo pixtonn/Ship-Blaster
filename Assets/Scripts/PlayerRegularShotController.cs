@@ -22,6 +22,7 @@ public class PlayerRegularShotController : MonoBehaviour
         }
     }
 
+    // shot hit an enemy
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Enemy"))

@@ -42,8 +42,13 @@ public class PlayerController : MonoBehaviour
         shootingCooldown -= Time.deltaTime;
         if (Input.GetKey(KeyCode.Space) && shootingCooldown <= 0)
         {
-            shootingCooldown = 10 / shootingSpeed;
-            Instantiate(regularShot, new Vector3(transform.position.x, transform.position.y, transform.position.z+projectileOffset), regularShot.transform.rotation);
+            Shoot();
         }
+    }
+
+    private void Shoot()
+    {
+        shootingCooldown = 10 / shootingSpeed;
+        Instantiate(regularShot, new Vector3(transform.position.x, transform.position.y, transform.position.z + projectileOffset), regularShot.transform.rotation);
     }
 }
